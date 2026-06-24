@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Popcorn Bliss</title>
+    <meta name="description" content="Oops! The page you were looking for doesn't exist. Find our gourmet popcorn catalog, customized tins, and business gift packages here.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Theme Toggle Executed Immediately -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body id="error-page" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="index.html">Classic Gourmet</a></li>
+                        <li class="dropdown-item"><a href="home-2.html">Seasonal & Corporate</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="gift-tins.html" class="nav-link">Gift Tins</a></li>
+                <li class="nav-item"><a href="corporate-gifting.html" class="nav-link">Corporate Gifting</a></li>
+                <li class="nav-item"><a href="custom-branding.html" class="nav-link">Custom Branding</a></li>
+                <li class="nav-item"><a href="bulk-orders.html" class="nav-link">Bulk Orders</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count">0</span>
+                </button>
+                <a href="signup.html" class="btn-premium btn-sm d-none d-lg-inline-flex" style="font-size: 0.85rem; border-radius: 20px; padding: 0.4rem 1.2rem;">Sign Up</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ERROR DETAILS -->
+    <section class="py-5 my-auto">
+        <div class="container text-center">
+            
+            <i class="fa-solid fa-cookie text-primary mb-4" style="font-size: 6rem; opacity: 0.8;"></i>
+            
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Oops! We Spilled the Kernels.</h1>
+            <h2 class="text-primary mb-3" style="font-family: var(--font-body); font-weight: 700; font-size: 1.5rem;">404 - Page Not Found</h2>
+            <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">The page you are looking for has been moved, renamed, or was eaten during baking sessions. Let's find your destination.</p>
+            
+            <!-- Fallback Search Box -->
+            <div class="d-flex gap-2 mx-auto mb-4" style="max-width: 400px;">
+                <input type="text" class="form-control" placeholder="Search products, recipe posts...">
+                <button class="btn-premium px-4"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="index.html" class="btn-premium"><i class="fa-solid fa-house"></i> Back to Home</a>
+                <a href="shop.html" class="btn-outline">Shop Popcorn</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3" style="border-top: none; margin-top: 0; padding-top: 0;">
+                <p class="mb-0">&copy; 2026 Popcorn Bliss Gifting LLC. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="contact.html">Privacy Policy</a>
+                    <a href="contact.html">Terms of Service</a>
+                    <a href="contact.html">Store Locator</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR DRAWER -->
+    <div id="cart-drawer-overlay" class="drawer-overlay"></div>
+    <div id="cart-drawer" class="drawer">
+        <div class="drawer-header">
+            <h5 class="mb-0" style="color: var(--primary); font-family: var(--font-body); font-weight: 700;">Gifting Basket</h5>
+            <button class="drawer-close" aria-label="Close Drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content drawer-cart-list">
+            <!-- Dynamic Cart Items loaded here -->
+        </div>
+        <div class="drawer-footer">
+            <div class="d-flex justify-content-between mb-3 fw-bold" style="font-size: 1.1rem;">
+                <span>Subtotal:</span>
+                <span id="drawer-subtotal-price" class="text-primary">$0.00</span>
+            </div>
+            <div class="d-flex flex-column gap-2">
+                <a href="cart.html" class="btn-outline text-center">View Cart & Details</a>
+                <a href="checkout.html" class="btn-premium text-center">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION MENU DRAWER -->
+    <div id="mobile-nav-overlay" class="drawer-overlay"></div>
+    <div id="mobile-nav-drawer" class="drawer" style="left: -400px; right: auto;">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.15rem; font-weight: 600;">
+                <li><a href="index.html">Classic Gourmet</a></li>
+                <li><a href="home-2.html">Seasonal & Corporate</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gift-tins.html">Gift Tins</a></li>
+                <li><a href="corporate-gifting.html">Corporate Gifting</a></li>
+                <li><a href="custom-branding.html">Custom Branding</a></li>
+                <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="border-top pt-3 mt-3 d-flex flex-column gap-3">
+                    <div class="mobile-menu-actions d-flex justify-content-center gap-3">
+                        <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                        <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="badge-count">0</span>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn-premium text-center">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GSAP Animations CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

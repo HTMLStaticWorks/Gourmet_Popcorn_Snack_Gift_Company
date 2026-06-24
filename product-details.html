@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Caramel Popcorn Details | Popcorn Bliss</title>
+    <meta name="description" content="Read ingredients, nutrition values, and select size options for our award-winning Signature Caramel Popcorn. Perfect for personalized gifting.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Theme Toggle Executed Immediately -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body id="product-details-page">
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="index.html">Classic Gourmet</a></li>
+                        <li class="dropdown-item"><a href="home-2.html">Seasonal & Corporate</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="gift-tins.html" class="nav-link">Gift Tins</a></li>
+                <li class="nav-item"><a href="corporate-gifting.html" class="nav-link">Corporate Gifting</a></li>
+                <li class="nav-item"><a href="custom-branding.html" class="nav-link">Custom Branding</a></li>
+                <li class="nav-item"><a href="bulk-orders.html" class="nav-link">Bulk Orders</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count">0</span>
+                </button>
+                <a href="signup.html" class="btn-premium btn-sm d-none d-lg-inline-flex" style="font-size: 0.85rem; border-radius: 20px; padding: 0.4rem 1.2rem;">Sign Up</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCT DETAIL WRAPPER -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- Left: Product Image Gallery -->
+                <div class="col-md-6">
+                    <div class="product-gallery-main mb-3" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow);">
+                        <img id="main-product-img" src="assets/images/products/popcorn-caramel.jpg" alt="Signature Caramel Popcorn closeup" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <img src="assets/images/products/popcorn-caramel.jpg" alt="Caramel Popcorn Thumbnail" style="border-radius: 8px; border: 2px solid var(--primary); cursor: pointer; opacity: 1; aspect-ratio: 1; object-fit: cover;" onclick="document.getElementById('main-product-img').src=this.src">
+                        </div>
+                        <div class="col-3">
+                            <img src="assets/images/products/popcorn-cheddar.jpg" alt="White Cheddar Thumbnail" style="border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.7; aspect-ratio: 1; object-fit: cover;" onclick="document.getElementById('main-product-img').src=this.src">
+                        </div>
+                        <div class="col-3">
+                            <img src="assets/images/products/popcorn-chocolate.jpg" alt="Dark Chocolate Thumbnail" style="border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.7; aspect-ratio: 1; object-fit: cover;" onclick="document.getElementById('main-product-img').src=this.src">
+                        </div>
+                        <div class="col-3">
+                            <img src="assets/images/products/popcorn-trio.jpg" alt="Trio Mix Thumbnail" style="border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.7; aspect-ratio: 1; object-fit: cover;" onclick="document.getElementById('main-product-img').src=this.src">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Customization & Ordering -->
+                <div class="col-md-6">
+                    <span class="text-primary fw-bold uppercase letter-spacing-1 mb-1 d-block" style="font-size: 0.85rem;">SIGNATURE RECIPE</span>
+                    <h1 class="mb-2" style="font-size: 2.5rem;">Signature Caramel Popcorn</h1>
+                    
+                    <div class="product-rating mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span class="text-muted ms-2">(124 customer reviews)</span>
+                    </div>
+
+                    <div class="product-price mb-4" style="font-size: 2rem;">$14.99</div>
+                    
+                    <p class="text-muted mb-4">Slow-cooked in copper kettles using real brown sugar, Wisconsin butter, and a pinch of Madagascar vanilla. Guaranteed crunchy exterior with a melt-in-your-mouth center.</p>
+                    
+                    <!-- Form options -->
+                    <div class="border-top pt-4 mb-4">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label">Select Size</label>
+                                <select id="detail-size-select" class="form-control">
+                                    <option value="1 Gallon">1 Gallon Tin ($14.99)</option>
+                                    <option value="2 Gallon">2 Gallon Tin ($24.99)</option>
+                                    <option value="3.5 Gallon">3.5 Gallon Tin ($38.99)</option>
+                                    <option value="Party Bag">Bulk Party Bag ($49.99)</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Gift Ribbon Style</label>
+                                <select id="detail-ribbon-select" class="form-control">
+                                    <option value="Gold Ribbon">Satin Gold Ribbon</option>
+                                    <option value="Festive Red">Holiday Berry Red Ribbon</option>
+                                    <option value="Navy Corporate">Corporate Navy Ribbon</option>
+                                    <option value="No Ribbon">No Ribbon (-$1.00)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Custom Greeting Card Note (Optional)</label>
+                                <textarea class="form-control" rows="3" placeholder="Type your greeting message to be printed on a card..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Adding CTA -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="quantity-control" style="height: 48px; border-radius: 24px;">
+                            <button type="button" class="quantity-btn" onclick="let input=document.getElementById('product-qty-input'); input.value=Math.max(1, parseInt(input.value)-1)">-</button>
+                            <input type="text" id="product-qty-input" value="1" readonly class="quantity-input" style="width: 50px;">
+                            <button type="button" class="quantity-btn" onclick="let input=document.getElementById('product-qty-input'); input.value=parseInt(input.value)+1">+</button>
+                        </div>
+                        
+                        <button class="btn-premium add-to-cart-btn flex-grow-1" style="height: 48px;" 
+                                data-id="p-caramel" 
+                                data-name="Signature Caramel Popcorn" 
+                                data-price="14.99" 
+                                data-img="assets/images/products/popcorn-caramel.jpg"
+                                data-size="1 Gallon"
+                                data-flavor="Signature Caramel">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Basket
+                        </button>
+                    </div>
+
+                    <!-- Extra Product Info Badges -->
+                    <div class="d-flex gap-4 mt-4 text-muted border-top pt-3" style="font-size: 0.85rem;">
+                        <span><i class="fa-solid fa-wheat-awn-circle-exclamation text-primary"></i> Gluten-Free</span>
+                        <span><i class="fa-solid fa-leaf text-primary"></i> 100% Non-GMO Corn</span>
+                        <span><i class="fa-solid fa-kitchen-set text-primary"></i> Wisconsin Dairy Butter</span>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Tabbed information panels -->
+            <div class="row mt-5 pt-4">
+                <div class="col-12">
+                    <div class="glass-card">
+                        <ul class="d-flex gap-4 border-bottom pb-3 mb-4" style="list-style: none; padding: 0; font-family: var(--font-heading); font-size: 1.25rem;">
+                            <li><a href="#desc" class="text-primary fw-bold">Description</a></li>
+                            <li><a href="#nutrition" class="text-muted">Nutrition & Ingredients</a></li>
+                            <li><a href="#shipping" class="text-muted">Shipping & Gifting Rules</a></li>
+                        </ul>
+                        
+                        <div id="desc-tab">
+                            <p>Hand-tumbled twice to guarantee complete coverage of our rich caramel glaze. Wisconsin sweet cream butter and locally grown Non-GMO kernels form the foundation. We bake each batch at precise temperatures so that the caramel hardens into a crisp, crunchy shell that preserves the popcorn freshness inside.</p>
+                            <p class="mb-0">Excellent for holiday party bowls, movie-night gifts, corporate corporate accounts, or personal snacking. Tins are shipped hermetically sealed to preserve texture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELATED PRODUCTS CAROUSEL -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="section-header text-start mb-4">
+                        <h2 style="font-size: 2rem;">Related Gift Collections</h2>
+                    </div>
+                </div>
+                <!-- Related 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/images/products/popcorn-cheddar.jpg" alt="White Cheddar">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn add-to-cart-btn" data-id="p-cheddar" data-name="White Cheddar Popcorn" data-price="13.99" data-img="assets/images/products/popcorn-cheddar.jpg"><i class="fa-solid fa-cart-plus"></i></button>
+                                <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Savory</span>
+                            <h3 class="product-title"><a href="product-details.html">White Cheddar</a></h3>
+                            <div class="product-footer">
+                                <span class="product-price">$13.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/images/products/popcorn-trio.jpg" alt="Chicago Style Trio">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn add-to-cart-btn" data-id="p-trio" data-name="Chicago Style Popcorn Trio" data-price="15.99" data-img="assets/images/products/popcorn-trio.jpg"><i class="fa-solid fa-cart-plus"></i></button>
+                                <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Mixed</span>
+                            <h3 class="product-title"><a href="product-details.html">Chicago Style Trio</a></h3>
+                            <div class="product-footer">
+                                <span class="product-price">$15.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/images/products/gift-box-deluxe.jpg" alt="Deluxe Ribbon Tin">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn add-to-cart-btn" data-id="p-deluxe-tin" data-name="Deluxe Classic Ribbon Tin" data-price="29.99" data-img="assets/images/products/gift-box-deluxe.jpg"><i class="fa-solid fa-cart-plus"></i></button>
+                                <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Gift Tin</span>
+                            <h3 class="product-title"><a href="product-details.html">Deluxe Classic Ribbon Tin</a></h3>
+                            <div class="product-footer">
+                                <span class="product-price">$29.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/images/corporate/corp-gift-1.jpg" alt="Premium Business Corporate Box">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn add-to-cart-btn" data-id="p-corp-box" data-name="Premium Business Corporate Box" data-price="39.99" data-img="assets/images/corporate/corp-gift-1.jpg"><i class="fa-solid fa-cart-plus"></i></button>
+                                <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Corporate Box</span>
+                            <h3 class="product-title"><a href="product-details.html">Premium Business Box</a></h3>
+                            <div class="product-footer">
+                                <span class="product-price">$39.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="logo mb-4" style="color: #FFFDF8;">
+                        <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+                    </a>
+                    <p style="color: rgba(255,253,248,0.7); font-size: 0.95rem;">Popcorn Bliss crafts premium gourmet snack tins, hand-tumbled with local butter and organic sugar. Embellished for festive gifting.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Gourmet Shop</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="shop.html">Popcorn Flavors</a></li>
+                        <li><a href="gift-tins.html">Custom Gift Tins</a></li>
+                        <li><a href="shop.html">Seasonal Gift Hampers</a></li>
+                        <li><a href="bulk-orders.html">Popcorn Boxes</a></li>
+                        <li><a href="shop.html">Star Flavors Mix</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Business Solutions</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="corporate-gifting.html">Corporate Gifts</a></li>
+                        <li><a href="custom-branding.html">Branded Metal Lids</a></li>
+                        <li><a href="bulk-orders.html">Volume Discounts</a></li>
+                        <li><a href="custom-branding.html">Ribbons & Sleeve Designs</a></li>
+                        <li><a href="contact.html">Concierge Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Newsletter Sign Up</h5>
+                    <p style="color: rgba(255,253,248,0.7); font-size: 0.9rem;">Join our email list to receive seasonal promotions, recipe announcements, and bulk catalogs.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0">&copy; 2026 Popcorn Bliss Gifting LLC. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="contact.html">Privacy Policy</a>
+                    <a href="contact.html">Terms of Service</a>
+                    <a href="contact.html">Store Locator</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR DRAWER -->
+    <div id="cart-drawer-overlay" class="drawer-overlay"></div>
+    <div id="cart-drawer" class="drawer">
+        <div class="drawer-header">
+            <h5 class="mb-0" style="color: var(--primary); font-family: var(--font-body); font-weight: 700;">Gifting Basket</h5>
+            <button class="drawer-close" aria-label="Close Drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content drawer-cart-list">
+            <!-- Dynamic Cart Items loaded here -->
+        </div>
+        <div class="drawer-footer">
+            <div class="d-flex justify-content-between mb-3 fw-bold" style="font-size: 1.1rem;">
+                <span>Subtotal:</span>
+                <span id="drawer-subtotal-price" class="text-primary">$0.00</span>
+            </div>
+            <div class="d-flex flex-column gap-2">
+                <a href="cart.html" class="btn-outline text-center">View Cart & Details</a>
+                <a href="checkout.html" class="btn-premium text-center">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION MENU DRAWER -->
+    <div id="mobile-nav-overlay" class="drawer-overlay"></div>
+    <div id="mobile-nav-drawer" class="drawer" style="left: -400px; right: auto;">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.15rem; font-weight: 600;">
+                <li><a href="index.html">Classic Gourmet</a></li>
+                <li><a href="home-2.html">Seasonal & Corporate</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gift-tins.html">Gift Tins</a></li>
+                <li><a href="corporate-gifting.html">Corporate Gifting</a></li>
+                <li><a href="custom-branding.html">Custom Branding</a></li>
+                <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="border-top pt-3 mt-3 d-flex flex-column gap-3">
+                    <div class="mobile-menu-actions d-flex justify-content-center gap-3">
+                        <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                        <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="badge-count">0</span>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn-premium text-center">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GSAP Animations CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

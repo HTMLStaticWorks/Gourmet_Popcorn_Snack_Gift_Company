@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Gourmet Popcorn & Gift Sets | Popcorn Bliss</title>
+    <meta name="description" content="Explore our catalog of gourmet popcorn tins, gift towers, and corporate party boxes. Filter by sweet, savory, or holiday theme packs. Fresh daily.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Theme Toggle Executed Immediately -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body id="shop-page">
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="index.html">Classic Gourmet</a></li>
+                        <li class="dropdown-item"><a href="home-2.html">Seasonal & Corporate</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li class="nav-item"><a href="gift-tins.html" class="nav-link">Gift Tins</a></li>
+                <li class="nav-item"><a href="corporate-gifting.html" class="nav-link">Corporate Gifting</a></li>
+                <li class="nav-item"><a href="custom-branding.html" class="nav-link">Custom Branding</a></li>
+                <li class="nav-item"><a href="bulk-orders.html" class="nav-link">Bulk Orders</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count">0</span>
+                </button>
+                <a href="signup.html" class="btn-premium btn-sm d-none d-lg-inline-flex" style="font-size: 0.85rem; border-radius: 20px; padding: 0.4rem 1.2rem;">Sign Up</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SHOP BANNER -->
+    <section class="py-5" style="background: radial-gradient(circle at 50% 50%, rgba(180, 83, 9, 0.05) 0%, rgba(124, 45, 18, 0.02) 100%); border-bottom: 1px solid var(--border);">
+        <div class="container text-center">
+            <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">Craft Your Snack Collection</h1>
+            <p class="text-muted mb-0">From single recipe packs to towering gift boxes. Hand-tumbled fresh daily.</p>
+        </div>
+    </section>
+
+    <!-- SHOP CONTENT -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <!-- FILTER SIDEBAR (Desktop) -->
+                <div class="col-lg-3">
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Categories</h4>
+                        <ul class="filter-list">
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" checked> Gift Tins
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Gift Boxes & Towers
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Party Favor Packs
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Single Recipe Bags
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Flavor Profile</h4>
+                        <ul class="filter-list">
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Hand-crafted Caramel
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Rich Cheddar Cheese
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Indulgent Chocolate Drizzle
+                                </label>
+                            </li>
+                            <li>
+                                <label class="checkbox-container">
+                                    <input type="checkbox"> Savory Herbs & Salt
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-widget">
+                        <h4 class="filter-title">Price Range</h4>
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span>$10.00</span>
+                            <span>$100.00</span>
+                        </div>
+                        <input type="range" class="range-slider" min="10" max="100" value="50">
+                    </div>
+                </div>
+
+                <!-- PRODUCT GRID (9 Products) -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <p class="text-muted mb-0">Showing 1–9 of 12 recipes</p>
+                        <select class="form-control" style="width: auto; border-radius: 20px; padding: 0.4rem 1.5rem;">
+                            <option>Default Sorting</option>
+                            <option>Sort by Popularity</option>
+                            <option>Sort by Price: Low to High</option>
+                            <option>Sort by Price: High to Low</option>
+                            <option>Sort by Rating</option>
+                        </select>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Product 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <span class="product-badge">Best Seller</span>
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/popcorn-caramel.jpg" alt="Signature Caramel">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Sweet</span>
+                                    <h3 class="product-title"><a href="product-details.html">Signature Caramel</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$14.99</span>
+                                        <div class="card-action-container" data-id="p-caramel" data-name="Signature Caramel Popcorn" data-price="14.99" data-img="assets/images/products/popcorn-caramel.jpg" data-size="1 Gallon" data-flavor="Signature Caramel">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/popcorn-cheddar.jpg" alt="White Cheddar">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Savory</span>
+                                    <h3 class="product-title"><a href="product-details.html">White Cheddar</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$13.99</span>
+                                        <div class="card-action-container" data-id="p-cheddar" data-name="White Cheddar Popcorn" data-price="13.99" data-img="assets/images/products/popcorn-cheddar.jpg" data-size="1 Gallon" data-flavor="White Cheddar">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/popcorn-chocolate.jpg" alt="Dark Chocolate Drizzle">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Indulgent</span>
+                                    <h3 class="product-title"><a href="product-details.html">Dark Chocolate Drizzle</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$16.99</span>
+                                        <div class="card-action-container" data-id="p-chocolate" data-name="Dark Chocolate Drizzle" data-price="16.99" data-img="assets/images/products/popcorn-chocolate.jpg" data-size="1 Gallon" data-flavor="Dark Chocolate Drizzle">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/popcorn-trio.jpg" alt="Chicago Style Trio">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Mixed</span>
+                                    <h3 class="product-title"><a href="product-details.html">Chicago Style Trio</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$15.99</span>
+                                        <div class="card-action-container" data-id="p-trio" data-name="Chicago Style Popcorn Trio" data-price="15.99" data-img="assets/images/products/popcorn-trio.jpg" data-size="1 Gallon" data-flavor="Chicago Style Trio">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/gift-box-deluxe.jpg" alt="Classic Gift Tin">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Gift Tin</span>
+                                    <h3 class="product-title"><a href="product-details.html">Deluxe Classic Ribbon Tin</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$29.99</span>
+                                        <div class="card-action-container" data-id="p-deluxe-tin" data-name="Deluxe Classic Ribbon Tin" data-price="29.99" data-img="assets/images/products/gift-box-deluxe.jpg" data-size="1 Gallon" data-flavor="Deluxe Classic Ribbon Tin">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <span class="product-badge">Holiday Set</span>
+                                <div class="product-image-container">
+                                    <img src="assets/images/products/gift-box-seasonal.jpg" alt="Festive Gift Box">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Gift Box</span>
+                                    <h3 class="product-title"><a href="product-details.html">Festive Holiday Box</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$44.99</span>
+                                        <div class="card-action-container" data-id="p-festive-box" data-name="Festive Holiday Gold Box" data-price="44.99" data-img="assets/images/products/gift-box-seasonal.jpg" data-size="1 Gallon" data-flavor="Festive Holiday Box">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/seasonal/christmas.jpg" alt="Golden Snowflake Tin">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Seasonal Tin</span>
+                                    <h3 class="product-title"><a href="product-details.html">Golden Snowflake Trio</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$34.99</span>
+                                        <div class="card-action-container" data-id="p-snowflake-tin" data-name="Golden Snowflake Trio Tin" data-price="34.99" data-img="assets/images/seasonal/christmas.jpg" data-size="1 Gallon" data-flavor="Golden Snowflake Trio">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/corporate/corp-gift-1.jpg" alt="Premium Business Box">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Corporate Box</span>
+                                    <h3 class="product-title"><a href="product-details.html">Premium Business Box</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$39.99</span>
+                                        <div class="card-action-container" data-id="p-corp-box" data-name="Premium Business Corporate Box" data-price="39.99" data-img="assets/images/corporate/corp-gift-1.jpg" data-size="1 Gallon" data-flavor="Premium Business Box">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assets/images/seasonal/fall.jpg" alt="Fall Pumpkin Spice">
+                                    <div class="product-card-actions">
+                                        <a href="product-details.html" class="product-action-icon"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-category">Seasonal Tin</span>
+                                    <h3 class="product-title"><a href="product-details.html">Fall Pumpkin Spice Tin</a></h3>
+                                    <div class="product-rating">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="product-footer">
+                                        <span class="product-price">$26.99</span>
+                                        <div class="card-action-container" data-id="p-fall-spice" data-name="Fall Pumpkin Spice Tin" data-price="26.99" data-img="assets/images/seasonal/fall.jpg" data-size="1 Gallon" data-flavor="Fall Pumpkin Spice Tin">
+                                            <button class="card-add-btn">Add to Cart</button>
+                                            <div class="card-qty-control d-none">
+                                                <button class="card-qty-btn card-qty-minus" aria-label="Decrease quantity">-</button>
+                                                <span class="card-qty-value">1</span>
+                                                <button class="card-qty-btn card-qty-plus" aria-label="Increase quantity">+</button>
+                                                <button class="card-qty-btn card-qty-remove" aria-label="Remove item"><i class="fa-regular fa-trash-can"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGINATION -->
+                    <div class="d-flex justify-content-center gap-2 mt-5">
+                        <a href="#" class="btn-premium px-3 py-2 text-center align-self-center active" style="border-radius: 5px;">1</a>
+                        <a href="#" class="btn-outline px-3 py-2 text-center align-self-center" style="border-radius: 5px; color: var(--text); border-color: var(--border);">2</a>
+                        <a href="#" class="btn-outline px-3 py-2 text-center align-self-center" style="border-radius: 5px; color: var(--text); border-color: var(--border);">Next &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html" class="logo mb-4" style="color: #FFFDF8;">
+                        <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+                    </a>
+                    <p style="color: rgba(255,253,248,0.7); font-size: 0.95rem;">Popcorn Bliss crafts premium gourmet snack tins, hand-tumbled with local butter and organic sugar. Embellished for festive gifting.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Gourmet Shop</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="shop.html">Popcorn Flavors</a></li>
+                        <li><a href="gift-tins.html">Custom Gift Tins</a></li>
+                        <li><a href="shop.html">Seasonal Gift Hampers</a></li>
+                        <li><a href="bulk-orders.html">Popcorn Boxes</a></li>
+                        <li><a href="shop.html">Star Flavors Mix</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Business Solutions</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="corporate-gifting.html">Corporate Gifts</a></li>
+                        <li><a href="custom-branding.html">Branded Metal Lids</a></li>
+                        <li><a href="bulk-orders.html">Volume Discounts</a></li>
+                        <li><a href="custom-branding.html">Ribbons & Sleeve Designs</a></li>
+                        <li><a href="contact.html">Concierge Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5>Newsletter Sign Up</h5>
+                    <p style="color: rgba(255,253,248,0.7); font-size: 0.9rem;">Join our email list to receive seasonal promotions, recipe announcements, and bulk catalogs.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0">&copy; 2026 Popcorn Bliss Gifting LLC. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="contact.html">Privacy Policy</a>
+                    <a href="contact.html">Terms of Service</a>
+                    <a href="contact.html">Store Locator</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR DRAWER -->
+    <div id="cart-drawer-overlay" class="drawer-overlay"></div>
+    <div id="cart-drawer" class="drawer">
+        <div class="drawer-header">
+            <h5 class="mb-0" style="color: var(--primary); font-family: var(--font-body); font-weight: 700;">Gifting Basket</h5>
+            <button class="drawer-close" aria-label="Close Drawer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content drawer-cart-list">
+            <!-- Dynamic Cart Items loaded here -->
+        </div>
+        <div class="drawer-footer">
+            <div class="d-flex justify-content-between mb-3 fw-bold" style="font-size: 1.1rem;">
+                <span>Subtotal:</span>
+                <span id="drawer-subtotal-price" class="text-primary">$0.00</span>
+            </div>
+            <div class="d-flex flex-column gap-2">
+                <a href="cart.html" class="btn-outline text-center">View Cart & Details</a>
+                <a href="checkout.html" class="btn-premium text-center">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION MENU DRAWER -->
+    <div id="mobile-nav-overlay" class="drawer-overlay"></div>
+    <div id="mobile-nav-drawer" class="drawer" style="left: -400px; right: auto;">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+            </a>
+            <button class="drawer-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.15rem; font-weight: 600;">
+                <li><a href="index.html">Classic Gourmet</a></li>
+                <li><a href="home-2.html">Seasonal & Corporate</a></li>
+                <li><a href="shop.html" class="text-primary">Shop</a></li>
+                <li><a href="gift-tins.html">Gift Tins</a></li>
+                <li><a href="corporate-gifting.html">Corporate Gifting</a></li>
+                <li><a href="custom-branding.html">Custom Branding</a></li>
+                <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="border-top pt-3 mt-3 d-flex flex-column gap-3">
+                    <div class="mobile-menu-actions d-flex justify-content-center gap-3">
+                        <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                        <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <button class="nav-action-btn cart-toggle-btn" aria-label="Open Cart">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span class="badge-count">0</span>
+                        </button>
+                    </div>
+                    <a href="signup.html" class="btn-premium text-center">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GSAP Animations CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Gourmet Account | Popcorn Bliss</title>
+    <meta name="description"
+        content="Register your Popcorn Bliss profile. Save shipping addresses, design ribbon styles, and access concierge billing. Quick signup.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Theme Toggle Executed Immediately -->
+    <script src="assets/js/theme-toggle.js"></script>
+</head>
+
+<body id="signup-page">
+
+    <!-- Floating Top-Right Actions (Theme and RTL toggles) -->
+    <div class="auth-top-actions">
+        <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+        <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+
+    <div class="auth-split-container">
+
+        <!-- Left Side: Form Content -->
+        <div class="auth-form-side">
+            <div class="auth-form-card" style="padding: 2.5rem 3rem;">
+
+                <div class="text-center mb-4">
+                    <a href="index.html" class="logo justify-content-center mb-1" style="font-size: 2rem;">
+                        <i class="fa-solid fa-cookie-bite"></i> Popcorn Bliss
+                    </a>
+                    <h1 style="font-size: 1.75rem; margin-bottom: 0.25rem;">Create Account</h1>
+                    <p class="text-muted">Save address books and tracks orders</p>
+                </div>
+
+                <form id="signup-form">
+                    <div class="row g-2">
+                        <div class="col-sm-6 form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" required placeholder="Marcus">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" required placeholder="Thorne">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required placeholder="name@company.com">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="form-label">Choose Password</label>
+                        <div class="password-input-container">
+                            <input type="password" class="form-control" required placeholder="Min 8 characters">
+                            <button type="button" class="password-toggle-btn" aria-label="Toggle Password Visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-premium form-submit-btn">
+                        Create Account
+                    </button>
+                </form>
+
+                <!-- Social Sign In divider -->
+                <div class="text-center my-4 position-relative">
+                    <hr style="border-color: var(--border);">
+                    <span class="px-3 position-absolute top-50 start-50 translate-middle"
+                        style="background-color: var(--surface); color: var(--text-muted); font-size: 0.85rem;">OR
+                        SECURE SSO</span>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <a href="#" class="auth-social-icon" aria-label="Google">
+                        <i class="fa-brands fa-google text-danger"></i>
+                    </a>
+                    <a href="#" class="auth-social-icon" aria-label="Apple">
+                        <i class="fa-brands fa-apple text-dark"></i>
+                    </a>
+                </div>
+
+                <p class="text-center text-muted mb-0" style="font-size: 0.9rem;">
+                    Already have an account? <a href="login.html" class="text-primary fw-bold">Sign in here</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP Animations CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

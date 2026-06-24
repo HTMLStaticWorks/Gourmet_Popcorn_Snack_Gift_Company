@@ -1,0 +1,235 @@
+/* ==========================================================================
+   DARK.CSS - Gourmet Popcorn & Snack Gift Company (Dark Mode Overrides)
+   ========================================================================== */
+
+[data-theme="dark"] {
+    --primary: #FBBF24;       /* Amber Gold */
+    --secondary: #FB923C;     /* Warm Peach Gold */
+    --accent: #EF4444;        /* Bright Festive Red */
+    --highlight: #F59E0B;     /* Warm Gold */
+    --bg: #1C1917;            /* Dark Stone Background */
+    --surface: #292524;       /* Stone Grey Surface */
+    --text: #FAFAF9;          /* Off-white Text */
+    --text-muted: #D1D5DB;    /* Light Grey Muted Text */
+    --border: #44403C;        /* Dark Stone Grey Border */
+    --glass: rgba(41, 37, 36, 0.65);
+    --glass-border: rgba(251, 191, 36, 0.15);
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.55);
+}
+
+/* Specific Dark Mode Refinements */
+[data-theme="dark"] body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+[data-theme="dark"] header {
+    background-color: rgba(28, 25, 23, 0.85);
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] header.scrolled {
+    background-color: rgba(28, 25, 23, 0.95);
+}
+
+/* Card Overrides */
+[data-theme="dark"] .product-card {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .product-image-container {
+    background-color: #1C1917;
+}
+
+[data-theme="dark"] .product-card-actions {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+[data-theme="dark"] .product-action-icon {
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+[data-theme="dark"] .product-action-icon:hover {
+    background-color: var(--primary);
+    color: #1C1917;
+}
+
+[data-theme="dark"] .product-title a {
+    color: var(--text);
+}
+
+[data-theme="dark"] .product-title a:hover {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .product-footer {
+    border-top: 1px solid var(--border);
+}
+
+/* Glassmorphism Contrast Enhancement */
+[data-theme="dark"] .glass-card {
+    background: var(--glass);
+    border-color: var(--glass-border);
+}
+
+/* Buttons in Dark Mode */
+[data-theme="dark"] .btn-premium {
+    background-color: var(--primary);
+    color: #1C1917 !important;
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] .btn-premium:hover {
+    background-color: transparent;
+    color: var(--primary) !important;
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--primary);
+    color: #1C1917 !important;
+}
+
+[data-theme="dark"] .btn-secondary-custom {
+    background-color: var(--secondary);
+    color: #1C1917 !important;
+    border-color: var(--secondary);
+}
+
+[data-theme="dark"] .btn-secondary-custom:hover {
+    background-color: transparent;
+    color: var(--secondary) !important;
+}
+
+/* Forms in Dark Mode */
+[data-theme="dark"] .form-control {
+    background-color: var(--surface);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-theme="dark"] .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+}
+
+/* Inputs Placeholders */
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(250, 250, 249, 0.4);
+}
+
+/* Footer elements */
+[data-theme="dark"] footer {
+    background-color: #110E0D;
+    border-top: 5px solid var(--primary);
+}
+
+[data-theme="dark"] footer h5 {
+    color: var(--primary);
+}
+
+[data-theme="dark"] footer h5::after {
+    background-color: var(--secondary);
+}
+
+[data-theme="dark"] .footer-social-icon {
+    background-color: rgba(250, 250, 249, 0.05);
+}
+
+[data-theme="dark"] .footer-social-icon:hover {
+    background-color: var(--primary);
+    color: #1C1917;
+}
+
+/* Tin Visualizer */
+[data-theme="dark"] .tin-visualizer {
+    background: radial-gradient(circle at center, var(--surface) 0%, var(--bg) 100%);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .tin-graphic {
+    background: var(--bg);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .tin-partition {
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] .tin-slot-label {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+}
+
+/* Blog details & text */
+[data-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Dropdown styling */
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .dropdown-item a:hover {
+    background-color: var(--bg);
+    color: var(--primary);
+}
+
+/* Off-canvas menu Drawer */
+[data-theme="dark"] .drawer {
+    background-color: var(--surface);
+}
+
+[data-theme="dark"] .drawer-header {
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .drawer-footer {
+    background-color: var(--bg);
+    border-top-color: var(--border);
+}
+
+/* Checkbox and table controls */
+[data-theme="dark"] .cart-table-wrapper {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .cart-table th {
+    background-color: var(--bg);
+    color: var(--primary);
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .cart-table td {
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .quantity-control {
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .quantity-btn:hover {
+    background-color: var(--bg);
+}
+
+[data-theme="dark"] .quantity-input {
+    border-left-color: var(--border);
+    border-right-color: var(--border);
+}
+
+/* Star rating override in dark mode */
+[data-theme="dark"] .product-rating {
+    color: var(--primary);
+}
