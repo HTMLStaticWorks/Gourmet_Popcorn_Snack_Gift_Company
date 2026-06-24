@@ -233,3 +233,78 @@
 [data-theme="dark"] .product-rating {
     color: var(--primary);
 }
+
+/* ==========================================================================
+   Gift Tin Builder Dark Mode Compatibility
+   ========================================================================== */
+
+/* Active/Inactive tab header buttons background reset */
+[data-theme="dark"] .builder-tab-btn {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Base style for option cards in dark mode */
+[data-theme="dark"] .builder-option-card {
+    background-color: var(--surface) !important;
+    border: 2px solid var(--border) !important;
+    transition: var(--transition);
+}
+
+/* Hover state for unselected cards in dark mode */
+[data-theme="dark"] .builder-option-card:hover {
+    border-color: var(--primary) !important;
+    background-color: rgba(251, 191, 36, 0.04) !important;
+}
+
+/* Unselected cards content styling (muted text/icons for clean active/inactive distinction) */
+[data-theme="dark"] .builder-option-card:not(.selected) {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .builder-option-card:not(.selected) h5,
+[data-theme="dark"] .builder-option-card:not(.selected) h6,
+[data-theme="dark"] .builder-option-card:not(.selected) span,
+[data-theme="dark"] .builder-option-card:not(.selected) small,
+[data-theme="dark"] .builder-option-card:not(.selected) i {
+    color: var(--text-muted) !important;
+}
+
+/* Selected option card state with gold highlighting */
+[data-theme="dark"] .builder-option-card.selected {
+    border-color: var(--primary) !important;
+    background-color: rgba(251, 191, 36, 0.08) !important;
+}
+
+[data-theme="dark"] .builder-option-card.selected h5,
+[data-theme="dark"] .builder-option-card.selected h6,
+[data-theme="dark"] .builder-option-card.selected span,
+[data-theme="dark"] .builder-option-card.selected i {
+    color: var(--primary) !important;
+}
+
+/* Bright gold ribbon icon matches dark theme primary */
+[data-theme="dark"] .builder-ribbon-card .fa-ribbon.text-warning {
+    color: var(--primary) !important;
+}
+
+/* Navy ribbon contrast fix (change dark blue to vibrant light blue in dark mode) */
+[data-theme="dark"] .ribbon-icon-navy {
+    color: #60A5FA !important;
+}
+
+/* Logo File Upload Selector Button Styling in Dark Mode */
+[data-theme="dark"] input[type="file"]::file-selector-button {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] input[type="file"]::file-selector-button:hover {
+    background-color: var(--primary);
+    color: #1C1917;
+}

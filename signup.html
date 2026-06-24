@@ -46,15 +46,14 @@
                 </div>
 
                 <form id="signup-form">
-                    <div class="row g-2">
-                        <div class="col-sm-6 form-group">
-                            <label class="form-label">First Name</label>
-                            <input type="text" class="form-control" required placeholder="Marcus">
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control" required placeholder="Thorne">
-                        </div>
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" required placeholder="Marcus">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" required placeholder="Thorne">
                     </div>
 
                     <div class="form-group">
@@ -62,7 +61,7 @@
                         <input type="email" class="form-control" required placeholder="name@company.com">
                     </div>
 
-                    <div class="form-group mb-4">
+                    <div class="form-group">
                         <label class="form-label">Choose Password</label>
                         <div class="password-input-container">
                             <input type="password" class="form-control" required placeholder="Min 8 characters">
@@ -70,6 +69,13 @@
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="checkbox-container text-muted" style="font-size: 0.9rem; line-height: 1.4; display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" required style="margin-top: 0.25rem;">
+                            <span>I agree to the <a href="#" class="text-primary fw-semibold">Terms & Conditions</a> and <a href="#" class="text-primary fw-semibold">Privacy Policy</a></span>
+                        </label>
                     </div>
 
                     <button type="submit" class="btn-premium form-submit-btn">

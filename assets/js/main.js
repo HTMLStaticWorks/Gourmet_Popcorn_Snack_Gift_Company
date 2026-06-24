@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Password Visibility Toggles
     setupPasswordToggles();
+
+    // 6. Scroll-To-Top Button & Progress Indicator
+    initScrollToTop();
+
+    // 7. FAQ Accordion Toggle System
+    initFAQAccordion();
 });
 
 /* ==========================================================================
@@ -34,11 +40,20 @@ function setupDrawers() {
     const drawers = document.querySelectorAll('.drawer');
     const closeButtons = document.querySelectorAll('.drawer-close');
 
+    const toggleScroll = (disable) => {
+        if (disable) {
+            document.body.classList.add('drawer-open');
+        } else {
+            document.body.classList.remove('drawer-open');
+        }
+    };
+
     // Close drawers on click overlay
     drawerOverlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             drawers.forEach(d => d.classList.remove('open'));
             overlay.classList.remove('open');
+            toggleScroll(false);
         });
     });
 
@@ -47,6 +62,7 @@ function setupDrawers() {
         btn.addEventListener('click', () => {
             drawers.forEach(d => d.classList.remove('open'));
             drawerOverlays.forEach(o => o.classList.remove('open'));
+            toggleScroll(false);
         });
     });
 
@@ -61,6 +77,7 @@ function setupDrawers() {
                 e.preventDefault();
                 cartDrawer.classList.add('open');
                 cartOverlay.classList.add('open');
+                toggleScroll(true);
             });
         });
     }
@@ -74,6 +91,21 @@ function setupDrawers() {
         mobileMenuBtn.addEventListener('click', () => {
             mobileNavDrawer.classList.add('open');
             mobileOverlay.classList.add('open');
+            toggleScroll(true);
+        });
+    }
+
+    // Trigger open mobile filter drawer
+    const filterToggleBtn = document.getElementById('filter-toggle-btn');
+    const filterDrawer = document.getElementById('filter-drawer');
+    const filterOverlay = document.getElementById('filter-drawer-overlay');
+
+    if (filterDrawer && filterOverlay && filterToggleBtn) {
+        filterToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            filterDrawer.classList.add('open');
+            filterOverlay.classList.add('open');
+            toggleScroll(true);
         });
     }
 
@@ -123,7 +155,7 @@ function initCartSystem() {
         const addToCartBtn = e.target.closest('.add-to-cart-btn');
         if (addToCartBtn) {
             e.preventDefault();
-            
+
             // Gather product details from data attributes
             const id = addToCartBtn.getAttribute('data-id') || 'product-' + Date.now();
             const name = addToCartBtn.getAttribute('data-name') || 'Gourmet Popcorn';
@@ -131,7 +163,7 @@ function initCartSystem() {
             const img = addToCartBtn.getAttribute('data-img') || 'assets/images/products/popcorn-caramel.jpg';
             const size = addToCartBtn.getAttribute('data-size') || '1 Gallon';
             const flavor = addToCartBtn.getAttribute('data-flavor') || 'Signature Caramel';
-            
+
             let qty = 1;
             const quantityInput = document.getElementById('product-qty-input');
             if (quantityInput) {
@@ -153,7 +185,7 @@ function initCartSystem() {
                 const img = container.getAttribute('data-img');
                 const size = container.getAttribute('data-size') || '1 Gallon';
                 const flavor = container.getAttribute('data-flavor') || 'Signature Caramel';
-                
+
                 addToCart(id, name, price, img, size, flavor, 1, cardAddBtn);
             }
         }
@@ -275,6 +307,7 @@ function addToCart(id, name, price, img, size, flavor, qty = 1, triggerBtn = nul
         if (cartDrawer && cartOverlay) {
             cartDrawer.classList.add('open');
             cartOverlay.classList.add('open');
+            document.body.classList.add('drawer-open');
         }
     }, 800);
 }
@@ -426,7 +459,7 @@ function syncFullCartPage() {
 
             cartTableBody.innerHTML = html;
             if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-            
+
             // Adding mock tax & shipping to compute total
             const shipping = 5.99;
             const total = subtotal + shipping;
@@ -463,7 +496,7 @@ function syncCheckoutPage() {
 
             checkoutSummaryList.innerHTML = html;
             if (checkoutSubtotal) checkoutSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-            
+
             const shipping = 5.99;
             const total = subtotal + shipping;
             if (checkoutTotal) checkoutTotal.textContent = `$${total.toFixed(2)}`;
@@ -476,15 +509,15 @@ function syncShopCards() {
     cardContainers.forEach(container => {
         const id = container.getAttribute('data-id');
         if (!id) return;
-        
+
         // Find matching items in the cart
         const matchingItems = cart.filter(item => item.id === id);
         const qty = matchingItems.reduce((acc, item) => acc + item.quantity, 0);
-        
+
         const addBtn = container.querySelector('.card-add-btn');
         const qtyControl = container.querySelector('.card-qty-control');
         const qtyValue = container.querySelector('.card-qty-value');
-        
+
         if (qty > 0) {
             if (addBtn) addBtn.classList.add('d-none');
             if (qtyControl) {
@@ -513,7 +546,7 @@ function animateFlyingKernel(button) {
         cartBtn = Array.from(cartBtns).find(btn => btn.getBoundingClientRect().width > 0) || cartBtn;
     }
     if (!cartBtn) return;
-    
+
     const cartRect = cartBtn.getBoundingClientRect();
 
     // Create flying particle
@@ -595,7 +628,7 @@ function initGiftTinBuilder() {
         btn.addEventListener('click', () => {
             builderTabs.forEach(t => t.classList.remove('active'));
             tabs.forEach(tab => tab.classList.remove('active'));
-            
+
             btn.classList.add('active');
             const targetTab = document.getElementById(btn.getAttribute('data-target'));
             if (targetTab) targetTab.classList.add('active');
@@ -608,10 +641,10 @@ function initGiftTinBuilder() {
         card.addEventListener('click', () => {
             sizeCards.forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
-            
+
             const size = card.getAttribute('data-size');
             currentConfig.size = size;
-            
+
             // Adjust partition visualization classes
             tinPartition.className = 'tin-partition';
             if (size === '2-way') {
@@ -623,7 +656,7 @@ function initGiftTinBuilder() {
             } else {
                 currentConfig.price = 24.99;
             }
-            
+
             updateTinSlotsDOM();
             updateBuilderPrice();
         });
@@ -635,7 +668,7 @@ function initGiftTinBuilder() {
         if (flavorCard) {
             const slot = flavorCard.getAttribute('data-slot') || '1';
             const flavor = flavorCard.getAttribute('data-flavor');
-            
+
             const parentTab = flavorCard.closest('.builder-tab');
             parentTab.querySelectorAll('.builder-flavor-card').forEach(c => c.classList.remove('selected'));
             flavorCard.classList.add('selected');
@@ -657,10 +690,10 @@ function initGiftTinBuilder() {
 
     function updateTinSlotsDOM() {
         if (!tinSlotsContainer) return;
-        
+
         let html = '';
         if (currentConfig.size === '1-way') {
-            html = `<div class="tin-slot position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+            html = `<div class="tin-slot" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
                         <span class="tin-slot-label">${currentConfig.flavor1}</span>
                     </div>`;
         } else if (currentConfig.size === '2-way') {
@@ -685,7 +718,7 @@ function initGiftTinBuilder() {
                 </div>
             `;
         }
-        
+
         tinSlotsContainer.innerHTML = html;
     }
 
@@ -699,7 +732,7 @@ function initGiftTinBuilder() {
     if (addToCartFromBuilderBtn) {
         addToCartFromBuilderBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // Check flavor parameters
             if (currentConfig.size === '2-way' && currentConfig.flavor2 === 'None') {
                 alert('Please select Flavor 2 in Step 2.');
@@ -712,7 +745,7 @@ function initGiftTinBuilder() {
 
             const tinName = `Custom ${currentConfig.size.toUpperCase()} Gourmet Tin`;
             const customFlavors = [currentConfig.flavor1, currentConfig.flavor2, currentConfig.flavor3].filter(f => f !== 'None').join(' + ');
-            
+
             addToCart(
                 'custom-tin-' + Date.now(),
                 tinName,
@@ -787,7 +820,7 @@ function initCorporateCalculator() {
         if (qtyVal) qtyVal.textContent = qty;
 
         let baseBoxCost = 29.99;
-        
+
         // Volume pricing rules
         if (qty >= 500) baseBoxCost = 19.99;
         else if (qty >= 100) baseBoxCost = 22.99;
@@ -834,7 +867,7 @@ function initFormSimulations() {
     if (checkoutForm) {
         checkoutForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Empty local cart
             cart = [];
             saveCart();
@@ -942,7 +975,7 @@ function setupPasswordToggles() {
             const container = btn.closest('.password-input-container');
             const input = container.querySelector('input');
             const icon = btn.querySelector('i');
-            
+
             if (input.type === 'password') {
                 input.type = 'text';
                 icon.classList.remove('fa-eye');
@@ -951,6 +984,113 @@ function setupPasswordToggles() {
                 input.type = 'password';
                 icon.classList.remove('fa-eye-slash');
                 icon.classList.add('fa-eye');
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   SCROLL-TO-TOP SYSTEM (Dynamically Injected)
+   ========================================================================== */
+function initScrollToTop() {
+    // 1. Create and inject the scroll-to-top button
+    const btn = document.createElement('button');
+    btn.id = 'scroll-to-top';
+    btn.className = 'scroll-to-top-btn';
+    btn.setAttribute('aria-label', 'Scroll to top');
+    btn.setAttribute('type', 'button');
+    
+    btn.innerHTML = `
+        <svg class="progress-ring" width="48" height="48">
+            <circle class="progress-ring__track" stroke-width="2" fill="transparent" r="22" cx="24" cy="24"/>
+            <circle class="progress-ring__circle" stroke-width="3" fill="transparent" r="22" cx="24" cy="24"/>
+        </svg>
+        <i class="fa-solid fa-chevron-up"></i>
+    `;
+    
+    document.body.appendChild(btn);
+    
+    const circle = btn.querySelector('.progress-ring__circle');
+    const radius = 22;
+    const circumference = 2 * Math.PI * radius;
+    
+    // Set initial dasharray and dashoffset
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+    
+    // 2. Handle scroll visibility and progress filling
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight;
+        const winHeight = window.innerHeight;
+        const totalScrollable = docHeight - winHeight;
+        
+        // Show/hide button based on scroll threshold (300px)
+        if (scrollTop > 300) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+        
+        // Update circle fill percent
+        if (totalScrollable > 0) {
+            const scrollPercent = (scrollTop / totalScrollable) * 100;
+            const offset = circumference - (scrollPercent / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+        } else {
+            circle.style.strokeDashoffset = circumference;
+        }
+    };
+    
+    // 3. Scroll to top action
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Add scroll event listener with throttle/requestAnimationFrame for performance
+    let isScrolling = false;
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                updateProgress();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    });
+    
+    // Initial call to set state
+    updateProgress();
+}
+
+/* ==========================================================================
+   FAQ ACCORDION TOGGLE SYSTEM
+   ========================================================================== */
+function initFAQAccordion() {
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const item = trigger.closest('.faq-item');
+            const content = item.querySelector('.faq-content');
+            
+            // Check if already active
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.faq-content').style.maxHeight = null;
+                el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                trigger.setAttribute('aria-expanded', 'true');
             }
         });
     });

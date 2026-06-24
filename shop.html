@@ -75,7 +75,7 @@
             <div class="row g-4">
                 
                 <!-- FILTER SIDEBAR (Desktop) -->
-                <div class="col-lg-3">
+                <div class="col-lg-3 d-none d-lg-block">
                     <div class="filter-widget">
                         <h4 class="filter-title">Categories</h4>
                         <ul class="filter-list">
@@ -140,15 +140,13 @@
 
                 <!-- PRODUCT GRID (9 Products) -->
                 <div class="col-lg-9">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <p class="text-muted mb-0">Showing 1–9 of 12 recipes</p>
-                        <select class="form-control" style="width: auto; border-radius: 20px; padding: 0.4rem 1.5rem;">
-                            <option>Default Sorting</option>
-                            <option>Sort by Popularity</option>
-                            <option>Sort by Price: Low to High</option>
-                            <option>Sort by Price: High to Low</option>
-                            <option>Sort by Rating</option>
-                        </select>
+                    <div class="d-flex justify-content-between align-items-center mb-4 gap-3">
+                        <p class="text-muted mb-0 d-none d-sm-block">Showing 1–9 of 12 recipes</p>
+                        <div class="d-flex gap-2 align-items-center w-100 justify-content-between justify-content-sm-end">
+                            <button type="button" class="btn-outline d-lg-none px-4 py-2" id="filter-toggle-btn" style="border-radius: 20px; font-size: 0.9rem;">
+                                <i class="fa-solid fa-filter me-2"></i> Filters
+                            </button>
+                        </div>
                     </div>
 
                     <div class="row g-4">
@@ -567,6 +565,77 @@
                     <a href="signup.html" class="btn-premium text-center">Sign Up</a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <!-- FILTER DRAWER (Mobile & Tablet) -->
+    <div id="filter-drawer-overlay" class="drawer-overlay"></div>
+    <div id="filter-drawer" class="drawer">
+        <div class="drawer-header">
+            <h5 class="mb-0" style="color: var(--primary); font-family: var(--font-body); font-weight: 700;">Filter Catalog</h5>
+            <button class="drawer-close" aria-label="Close Filters"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-content p-4">
+            <div class="filter-widget mb-4">
+                <h4 class="filter-title">Categories</h4>
+                <ul class="filter-list">
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked> Gift Tins
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Gift Boxes & Towers
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Party Favor Packs
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Single Recipe Bags
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-widget mb-4">
+                <h4 class="filter-title">Flavor Profile</h4>
+                <ul class="filter-list">
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Hand-crafted Caramel
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Rich Cheddar Cheese
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Indulgent Chocolate Drizzle
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox"> Savory Herbs & Salt
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-widget">
+                <h4 class="filter-title">Price Range</h4>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span>$10.00</span>
+                    <span>$100.00</span>
+                </div>
+                <input type="range" class="range-slider" min="10" max="100" value="50">
+            </div>
         </div>
     </div>
 

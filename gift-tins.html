@@ -75,11 +75,11 @@
                 
                 <!-- Left: 3D Popcorn Tin Visualizer Graphic -->
                 <div class="col-lg-5 col-xl-6">
-                    <div class="tin-visualizer sticky-top" style="top: 100px; z-index: 1;">
+                    <div class="tin-visualizer sticky-lg-top" style="z-index: 1;">
                         <div class="tin-graphic mb-4">
                             <!-- Background filled slots -->
                             <div class="tin-partition"></div>
-                            <div class="tin-slots-container w-100 h-100 position-absolute">
+                            <div class="tin-slots-container w-100 h-100 position-absolute" style="top: 0; left: 0;">
                                 <!-- Dynamic label slots loaded via Javascript -->
                             </div>
                         </div>
@@ -93,9 +93,18 @@
                     
                     <!-- Steps Tabs -->
                     <div class="d-flex justify-content-between border-bottom pb-3 mb-4 gap-2">
-                        <button class="builder-tab-btn active btn-link border-0 fw-bold text-primary" data-target="step-1" style="font-size: 1.1rem; padding: 0.5rem 1rem;">1. Size & Layout</button>
-                        <button class="builder-tab-btn btn-link border-0 fw-bold text-muted" data-target="step-2" style="font-size: 1.1rem; padding: 0.5rem 1rem;">2. Popcorn Flavors</button>
-                        <button class="builder-tab-btn btn-link border-0 fw-bold text-muted" data-target="step-3" style="font-size: 1.1rem; padding: 0.5rem 1rem;">3. Ribbons & Personalization</button>
+                        <button class="builder-tab-btn active btn-link border-0 fw-bold text-primary" data-target="step-1" style="font-size: 1.1rem; padding: 0.5rem 1rem;">
+                            <span class="d-sm-inline d-none">1. Size & Layout</span>
+                            <span class="d-inline d-sm-none">1. Size</span>
+                        </button>
+                        <button class="builder-tab-btn btn-link border-0 fw-bold text-muted" data-target="step-2" style="font-size: 1.1rem; padding: 0.5rem 1rem;">
+                            <span class="d-sm-inline d-none">2. Popcorn Flavors</span>
+                            <span class="d-inline d-sm-none">2. Flavors</span>
+                        </button>
+                        <button class="builder-tab-btn btn-link border-0 fw-bold text-muted" data-target="step-3" style="font-size: 1.1rem; padding: 0.5rem 1rem;">
+                            <span class="d-sm-inline d-none">3. Ribbons & Personalization</span>
+                            <span class="d-inline d-sm-none">3. Ribbons</span>
+                        </button>
                     </div>
 
                     <!-- Step 1 Content: Size Options -->
@@ -103,8 +112,8 @@
                         <h3 class="mb-3" style="font-size: 1.5rem;">Select Divider Layout</h3>
                         <p class="text-muted mb-4">Choose how many distinct flavors you want to include in your metal gift tin.</p>
                         
-                        <div class="row g-3">
-                            <div class="col-md-4">
+                        <div class="row g-2 g-sm-3">
+                            <div class="col-4">
                                 <div class="builder-option-card builder-size-card selected text-center" data-size="1-way">
                                     <i class="fa-solid fa-circle text-primary mb-3" style="font-size: 2.5rem;"></i>
                                     <h5>Single Flavor</h5>
@@ -112,7 +121,7 @@
                                     <span class="fw-bold text-primary">$24.99</span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-4">
                                 <div class="builder-option-card builder-size-card text-center" data-size="2-way">
                                     <i class="fa-solid fa-circle-half-stroke text-primary mb-3" style="font-size: 2.5rem;"></i>
                                     <h5>Two Flavors</h5>
@@ -120,7 +129,7 @@
                                     <span class="fw-bold text-primary">$32.99</span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-4">
                                 <div class="builder-option-card builder-size-card text-center" data-size="3-way">
                                     <i class="fa-solid fa-pie-chart text-primary mb-3" style="font-size: 2.5rem;"></i>
                                     <h5>Three Flavors</h5>
@@ -240,7 +249,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="builder-option-card builder-ribbon-card text-center p-2" data-ribbon="Satin Navy Ribbon">
-                                    <i class="fa-solid fa-ribbon mb-1" style="font-size: 1.5rem; color: #1E3A8A;"></i>
+                                    <i class="fa-solid fa-ribbon mb-1 ribbon-icon-navy" style="font-size: 1.5rem;"></i>
                                     <h6 class="mb-0" style="font-size: 0.85rem;">Navy Corporate</h6>
                                 </div>
                             </div>
@@ -256,7 +265,7 @@
 
                     <!-- Builder Pricing Summary Box -->
                     <div class="glass-card mt-5 p-4 border-2">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center align-items-start gap-2 mb-3">
                             <div>
                                 <h4 class="mb-0 text-primary">Tin Subtotal</h4>
                                 <small class="text-muted">Calculated package cost</small>
