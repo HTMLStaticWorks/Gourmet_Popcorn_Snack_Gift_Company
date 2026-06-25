@@ -49,13 +49,16 @@
     padding: 0;
 }
 
+html {
+    overflow-x: clip;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
-    overflow-x: clip;
     transition: background-color 0.3s, color 0.3s;
 }
 
