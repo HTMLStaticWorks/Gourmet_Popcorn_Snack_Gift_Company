@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     rtlTogglers.forEach(btn => {
         btn.addEventListener('click', () => {
+            // Disable transitions temporarily to prevent layout sweeping
+            document.documentElement.classList.add('no-transition');
+
             const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
             if (isRtl) {
                 document.documentElement.removeAttribute('dir');
@@ -61,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('rtl_enabled', 'true');
             }
             updatePaginationArrows();
+
+            // Force browser reflow to apply layout immediately
+            document.documentElement.offsetHeight;
+
+            // Re-enable transitions
+            setTimeout(() => {
+                document.documentElement.classList.remove('no-transition');
+            }, 50);
         });
     });
 

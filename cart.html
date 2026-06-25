@@ -103,6 +103,22 @@
                             </div>
                         </div>
 
+                        <!-- Quick Summary Block (Below Added Items) -->
+                        <div id="cart-quick-summary" class="glass-card p-4 mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3 fw-bold" style="font-size: 1.2rem;">
+                                <span>Subtotal:</span>
+                                <span id="quick-subtotal-price" class="text-primary">$0.00</span>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row gap-3">
+                                <a href="cart.html" class="btn-outline text-center flex-grow-1 py-3" style="border-radius: 30px; font-size: 1.0rem; display: flex; align-items: center; justify-content: center; min-height: 54px;">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> View Cart & Details
+                                </a>
+                                <a href="checkout.html" class="btn-premium text-center flex-grow-1 py-3" style="border-radius: 30px; font-size: 1.0rem; display: flex; align-items: center; justify-content: center; min-height: 54px;">
+                                    <i class="fa-solid fa-circle-check me-2"></i> Proceed to Checkout
+                                </a>
+                            </div>
+                        </div>
+
                         <!-- Promo Code & Gift Wrap Options -->
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -221,27 +237,7 @@
         </div>
     </footer>
 
-    <!-- CART SIDEBAR DRAWER -->
-    <div id="cart-drawer-overlay" class="drawer-overlay"></div>
-    <div id="cart-drawer" class="drawer">
-        <div class="drawer-header">
-            <h5 class="mb-0" style="color: var(--primary); font-family: var(--font-body); font-weight: 700;">Gifting Basket</h5>
-            <button class="drawer-close" aria-label="Close Drawer"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="drawer-content drawer-cart-list">
-            <!-- Dynamic Cart Items loaded here -->
-        </div>
-        <div class="drawer-footer">
-            <div class="d-flex justify-content-between mb-3 fw-bold" style="font-size: 1.1rem;">
-                <span>Subtotal:</span>
-                <span id="drawer-subtotal-price" class="text-primary">$0.00</span>
-            </div>
-            <div class="d-flex flex-column gap-2">
-                <a href="cart.html" class="btn-outline text-center">View Cart & Details</a>
-                <a href="checkout.html" class="btn-premium text-center">Proceed to Checkout</a>
-            </div>
-        </div>
-    </div>
+
 
     <!-- MOBILE NAVIGATION MENU DRAWER -->
     <div id="mobile-nav-overlay" class="drawer-overlay"></div>

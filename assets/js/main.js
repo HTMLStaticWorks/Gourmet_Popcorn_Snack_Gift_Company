@@ -68,19 +68,13 @@ function setupDrawers() {
 
     // Trigger open cart drawer button
     const cartToggleBtns = document.querySelectorAll('.cart-toggle-btn');
-    const cartDrawer = document.getElementById('cart-drawer');
-    const cartOverlay = document.getElementById('cart-drawer-overlay');
 
-    if (cartDrawer && cartOverlay) {
-        cartToggleBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                cartDrawer.classList.add('open');
-                cartOverlay.classList.add('open');
-                toggleScroll(true);
-            });
+    cartToggleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'cart.html';
         });
-    }
+    });
 
     // Trigger open mobile menu
     const mobileMenuBtn = document.querySelector('.mobile-toggle');
@@ -300,16 +294,8 @@ function addToCart(id, name, price, img, size, flavor, qty = 1, triggerBtn = nul
         animateFlyingKernel(triggerBtn);
     }
 
-    // Auto open cart drawer after addition
-    setTimeout(() => {
-        const cartDrawer = document.getElementById('cart-drawer');
-        const cartOverlay = document.getElementById('cart-drawer-overlay');
-        if (cartDrawer && cartOverlay) {
-            cartDrawer.classList.add('open');
-            cartOverlay.classList.add('open');
-            document.body.classList.add('drawer-open');
-        }
-    }, 800);
+    // Show success popup notification instead of opening drawer
+    showPopupNotification('Added to Basket', `${name} has been added to your gifting basket.`);
 }
 
 function adjustQty(btn, change) {
@@ -430,7 +416,7 @@ function syncFullCartPage() {
 
                 html += `
                     <tr>
-                        <td>
+                        <td data-label="Product">
                             <div class="cart-product">
                                 <img src="${item.img}" alt="${item.name}" class="cart-product-img">
                                 <div>
@@ -439,16 +425,16 @@ function syncFullCartPage() {
                                 </div>
                             </div>
                         </td>
-                        <td><span class="fw-bold">$${item.price.toFixed(2)}</span></td>
-                        <td>
+                        <td data-label="Price"><span class="fw-bold">$${item.price.toFixed(2)}</span></td>
+                        <td data-label="Quantity">
                             <div class="quantity-control">
                                 <button class="quantity-btn qty-minus">-</button>
                                 <input type="text" class="quantity-input" data-index="${index}" value="${item.quantity}" readonly>
                                 <button class="quantity-btn qty-plus">+</button>
                             </div>
                         </td>
-                        <td><span class="fw-bold text-primary">$${itemTotal.toFixed(2)}</span></td>
-                        <td>
+                        <td data-label="Total"><span class="fw-bold text-primary">$${itemTotal.toFixed(2)}</span></td>
+                        <td data-label="Remove">
                             <button class="remove-cart-item" data-index="${index}">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
@@ -459,6 +445,11 @@ function syncFullCartPage() {
 
             cartTableBody.innerHTML = html;
             if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+            
+            const quickSubtotal = document.getElementById('quick-subtotal-price');
+            if (quickSubtotal) {
+                quickSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+            }
 
             // Adding mock tax & shipping to compute total
             const shipping = 5.99;
