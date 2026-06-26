@@ -1297,6 +1297,37 @@ html[dir="rtl"] .offset-md-4 {
     .mobile-dropdown.open .mobile-dropdown-toggle i {
         transform: rotate(180deg);
     }
+
+    /* Mobile Drawer active highlighting styles */
+    #mobile-nav-drawer .drawer-content ul li a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        transition: var(--transition);
+        color: var(--text);
+    }
+
+    #mobile-nav-drawer .drawer-content ul li a:hover {
+        background-color: var(--bg);
+        color: var(--primary) !important;
+        padding-left: 1.25rem;
+    }
+
+    #mobile-nav-drawer .drawer-content ul li a.active {
+        background-color: rgba(180, 83, 9, 0.08); /* Transparent Caramel */
+        color: var(--primary) !important;
+        padding-left: 1.25rem;
+        font-weight: 700;
+    }
+
+    #mobile-nav-drawer .drawer-content ul.mobile-dropdown-menu li a {
+        padding: 0.4rem 0.75rem;
+    }
+    
+    #mobile-nav-drawer .drawer-content ul.mobile-dropdown-menu li a:hover,
+    #mobile-nav-drawer .drawer-content ul.mobile-dropdown-menu li a.active {
+        padding-left: 1.25rem;
+    }
 }
 
 @media (max-width: 768px) {

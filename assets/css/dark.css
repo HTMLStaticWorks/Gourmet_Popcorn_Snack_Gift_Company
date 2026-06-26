@@ -308,3 +308,16 @@
     background-color: var(--primary);
     color: #1C1917;
 }
+
+/* Mobile Drawer dark mode overrides */
+@media (max-width: 1024px) {
+    [data-theme="dark"] #mobile-nav-drawer .drawer-content ul li a:hover {
+        background-color: var(--bg);
+        color: var(--primary) !important;
+    }
+    
+    [data-theme="dark"] #mobile-nav-drawer .drawer-content ul li a.active {
+        background-color: rgba(251, 191, 36, 0.15); /* Transparent Amber Gold */
+        color: var(--primary) !important;
+    }
+}

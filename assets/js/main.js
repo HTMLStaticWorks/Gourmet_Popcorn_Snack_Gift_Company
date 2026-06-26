@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. FAQ Accordion Toggle System
     initFAQAccordion();
+
+    // 8. Dynamic Page Active Navigation Highlighting
+    initActiveNavigation();
 });
 
 /* ==========================================================================
@@ -1085,5 +1088,109 @@ function initFAQAccordion() {
             }
         });
     });
+}
+
+/* ==========================================================================
+   DYNAMIC ACTIVE NAVIGATION HIGHLIGHTING SYSTEM
+   ========================================================================== */
+function initActiveNavigation() {
+    const path = window.location.pathname;
+    let page = path.split("/").pop();
+    if (!page || page === "" || page === "/" || !page.includes(".")) {
+        page = "index.html";
+    }
+
+    const pageMapping = {
+        'index.html': 'index.html',
+        'home-2.html': 'home-2.html',
+        'shop.html': 'shop.html',
+        'product-details.html': 'shop.html',
+        'gift-tins.html': 'gift-tins.html',
+        'corporate-gifting.html': 'corporate-gifting.html',
+        'custom-branding.html': 'custom-branding.html',
+        'bulk-orders.html': 'bulk-orders.html',
+        'blog.html': 'blog.html',
+        'blog-details.html': 'blog.html',
+        'contact.html': 'contact.html'
+    };
+
+    const targetPage = pageMapping[page] || page;
+
+    // A. DESKTOP NAVIGATION
+    const desktopLinks = document.querySelectorAll('.nav-menu a');
+    let hasActiveDesktopDropdown = false;
+
+    // First check dropdown links under Home
+    const desktopDropdownLinks = document.querySelectorAll('.nav-menu .dropdown-menu a');
+    desktopDropdownLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === page) {
+            link.classList.add('active');
+            hasActiveDesktopDropdown = true;
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // Then handle top-level desktop links
+    const desktopTopLinks = document.querySelectorAll('.nav-menu > li > a');
+    desktopTopLinks.forEach(link => {
+        const hasDropdown = link.parentElement.querySelector('.dropdown-menu') !== null;
+        if (hasDropdown) {
+            if (hasActiveDesktopDropdown || targetPage === 'index.html' || targetPage === 'home-2.html') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        } else {
+            const href = link.getAttribute('href');
+            if (href === targetPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        }
+    });
+
+    // B. MOBILE NAVIGATION
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    if (mobileDrawer) {
+        let hasActiveMobileDropdown = false;
+
+        // First check mobile dropdown menu links
+        const mobileDropdownLinks = mobileDrawer.querySelectorAll('.mobile-dropdown-menu a');
+        mobileDropdownLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === page) {
+                link.classList.add('active');
+                hasActiveMobileDropdown = true;
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Then handle mobile top-level links
+        const mobileLinks = mobileDrawer.querySelectorAll('.drawer-content > ul > li > a');
+        mobileLinks.forEach(link => {
+            const isDropdownToggle = link.classList.contains('mobile-dropdown-toggle');
+            if (isDropdownToggle) {
+                if (hasActiveMobileDropdown || targetPage === 'index.html' || targetPage === 'home-2.html') {
+                    link.classList.add('active');
+                    // Auto open parent dropdown if it is active
+                    const parentLi = link.closest('.mobile-dropdown');
+                    if (parentLi) parentLi.classList.add('open');
+                } else {
+                    link.classList.remove('active');
+                }
+            } else {
+                const href = link.getAttribute('href');
+                if (href === targetPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        });
+    }
 }
 
